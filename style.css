@@ -6,14 +6,7 @@ div {
     border-radius: 50%;
     position: relative;
 }
-.newdiv {
-    border: solid black 1px;
-    background-color: rgb(30, 255, 0);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: relative;
-}
+
 section {
     border-radius: 5%;
     border: 2px solid black;

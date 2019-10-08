@@ -9,20 +9,16 @@ var btn = document.createElement("button");
 document.body.appendChild(btn)
 btn.innerHTML = "Play"
 
-var newDivMove = document.createElement("div");
-
-
-divMove.addEventListener("click", function(event) {
-    divMove.remove() 
+for (let i = 0; i < 10; i++) {     
+function killduck(event) {
+    this.remove() 
     // sectionElement.appendChild(divMove)   
-    sectionElement.appendChild(newDivMove) 
-    newDivMove.setAttribute("class", "newdiv")
-    newDivMove.addEventListener("click", function(event) {
-        newDivMove.remove()
-        sectionElement.appendChild(divMove)
-    });
-});
+    divMove = document.createElement("div");
+    sectionElement.appendChild(divMove); 
+    divMove.addEventListener("click", killduck);
+}
 
+divMove.addEventListener("click", killduck);
 
 btn.addEventListener("click", function () {
     
@@ -36,11 +32,9 @@ btn.addEventListener("click", function () {
         divMove.style.left = posX + "px";
         divMove.style.top = posY + "px";
         divMove.style.transitionDuration = "2s"
-
-        newDivMove.style.left = posX + "px";
-        newDivMove.style.top = posY + "px";
-        newDivMove.style.transitionDuration = "2s"
     }
 })
 
+}
+    
 
